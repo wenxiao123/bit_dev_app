@@ -3,9 +3,11 @@
 * @Author: moxcong 
 * @Date: 2019-10-09 13:42:44 
 */
+import 'package:bit_dev_app/pages/fiat/FiatStates.dart';
 import 'package:bit_dev_app/utils/screen_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'app_icons.dart';
 import 'utils/staus_bar_color.dart';
 
 import 'package:bit_dev_app/pages/home/HomeStates.dart';
@@ -40,7 +42,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin{
   int _selectedIndex = 0;
-  final bodyList = [HomeStates(),HomeStates(),HomeStates()];
+  final bodyList = [HomeStates(),HomeStates(),FiatStates()];
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context);
@@ -62,23 +64,23 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         type: BottomNavigationBarType.fixed,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Icon(AppIcons.HOME),
               title: Text('首页')
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.category),
+              icon: Icon(AppIcons.COIN),
               title: Text('币币')
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
+              icon: Icon(AppIcons.FIAT),
               title: Text('法币')
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.account_balance_wallet),
+              icon: Icon(AppIcons.FUNDS),
               title: Text('资产')
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle),
+              icon: Icon(AppIcons.MY),
               title: Text('我的')
           ),
         ],
