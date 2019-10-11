@@ -215,7 +215,6 @@ class MarketListView extends StatelessWidget {
                   );
                 }),
           )
-
         ],
       )
     );
